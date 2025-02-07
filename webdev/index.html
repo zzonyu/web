@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แนะนำหนังในNetflix</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>เข้าสู่ระบบ</h2>
+        <form action="/login" method="POST">
+            <input type="text" name="username" placeholder="ชื่อผู้ใช้งาน" required>
+            <input type="password" name="password" placeholder="รหัสผ่าน" required>
+            <button type="submit">เข้าสู่ระบบ</button>
+        </form>
+        <a href="register.html">สมัครสมาชิก</a>
+    </div>
+    
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // ป้องกันการโหลดหน้าใหม่
+            alert("คุณได้ทำการเข้าสู่ระบบสำเร็จ");
+            window.location.href = "home.html"; // เปลี่ยนเส้นทางไปยังหน้า home
+        });
+    </script>
+
+</body>
+</html>
